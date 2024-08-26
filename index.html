@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Responsive Web Developer Starter - devchallenges.io</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="any">
-</head>
-<body>
-    <header>
-        <div class="get-started">Get started by editting <b>index.html</b></div>
-        <img class="logo" src="images/logo.svg" alt="Main Logo">
-    </header>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>QR Code Generator</title>
+    <link
+      rel="icon"
+      href="images/favicon.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+  </head>
+  <body>
     <main>
-        <img src="images/devchallenges-logo.svg" alt="A beautiful landscape">
-        <h3 class="title">Responsive Web Developer Starter</h3>
+      <section class="qr-generator">
+        <img
+          class="logo-big"
+          src="./images/logo-qr-generator.svg"
+          alt="QR-Code"
+        />
+        <div class="search-box-container">
+          <div class="search-box">
+            <input
+              type="search"
+              name=""
+              id="qr-url"
+              placeholder="Enter an url"
+            />
+            <button class="generate" id="button-generate">QR Code</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="qr-display">
+        <img
+          class="logo-small"
+          src="./images/logo-qr-generator.svg"
+          alt="QR-Code"
+        />
+        <div class="qr-img-container">
+          <div class="qr-frame">
+            <div id="qrcode"></div>
+          </div>
+        </div>
+        <div class="qr-buttons-container">
+          <button class="qr-buttons" id="download">Download ⬇</button>
+          <button class="qr-buttons" id="share">Share 🔗</button>
+        </div>
+      </section>
+      <div class="info"></div>
     </main>
-
-    <footer>
-        <a class="link-card" href="https://devchallenges.io/" target="_blank">
-            <div class="link-title">Challenges</div>
-            <div class="link-description">Choose a challenge and start learning by building real-life projects.</div>
-        </a>
-
-        <a class="link-card" href="https://devchallenges.io/challenges" target="_blank">
-            <div class="link-title">Solutions</div>
-            <div class="link-description">Checkout how orders solve the challenges, compare with yours and give them feedback.</div>
-        </a>
-
-        <a class="link-card" href="https://devchallenges.io/" target="_blank">
-            <div class="link-title">Blogs</div>
-            <div class="link-description">Checkout devchallenges blogs, tutorials, updates. Find useful resources to get you started.</div>
-        </a>
-
-        <a class="link-card" href="https://devchallenges.io/" target="_blank">
-            <div class="link-title">Deploy</div>
-            <div class="link-description">How to deploy and submit your solution.</div>
-        </a>
-       
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
